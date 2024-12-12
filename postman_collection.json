@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "c0d64ff2-33d6-47c0-9fc4-e0f3addbd4f2",
+		"name": "money_transfer_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31259357",
+		"_collection_link": "https://dark-shuttle-292703.postman.co/workspace/My-Workspace~c3fca481-2996-4a1a-89df-a498408b54e1/collection/31259357-c0d64ff2-33d6-47c0-9fc4-e0f3addbd4f2?action=share&source=collection_link&creator=31259357"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
