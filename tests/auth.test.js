@@ -1,6 +1,6 @@
 import request from "supertest";
 import app from "../app";
-import knex, { migrate, destroy } from "../src/config/db";
+import knex from "../src/config/db";
 
 const { knex, migrate } = require("../knex"); // Adjust the path as needed
 

@@ -26,17 +26,19 @@ router.post('/deposit-notification', async (req, res) => {
     }
 
     // Update the balance and log the transaction
-    await transaction(async (trx) => {
+    await knex.transaction(async (trx) => {
+      // Update the balance
       await trx('bank_accounts')
         .where({ account_number: accountNumber })
         .increment('balance', amount);
 
+      // Log the transaction
       await trx('transactions').insert({
         transaction_id: transactionId,
         account_number: accountNumber,
         type: 'deposit',
         amount,
-        created_at: fn.now(),
+        created_at: trx.fn.now(),
       });
     });
 

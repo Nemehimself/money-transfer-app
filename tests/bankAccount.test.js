@@ -1,9 +1,9 @@
-const request = require('supertest');
-const app = require('../src/app');
-const knex = require('../src/config/db');
+import request from 'supertest';
+import app from '../src/app';
+import knex from '../src/config/db';
 
 beforeAll(async () => {
-  await knex.migrate.latest();
+  await migrate.latest();
   await knex('users').del();
   await knex('bank_accounts').del();
 
@@ -17,7 +17,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  await knex.destroy();
+  await destroy();
 });
 
 describe('Bank Account', () => {

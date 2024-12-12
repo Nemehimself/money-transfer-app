@@ -3,6 +3,8 @@ import json  from "body-parser";
 import authRoutes from './src/routes/auth.js';
 import bankAccountRoutes from './src/routes/bankAccount.js';
 import webhooksRoutes from './src/routes/webhooks.js';
+import transferRoutes from './src/routes/transfers.js';
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,6 +14,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/bank-account", bankAccountRoutes);
 app.use('/api/webhooks', webhooksRoutes);
+app.use('/api/transfers', transferRoutes);
 
 app.post("/signup", (_req, res) => {
   res.json({ message: "User signed up!" });
